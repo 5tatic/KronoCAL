@@ -1,7 +1,9 @@
-# Coming Soon
+let calendar = ('eventCalendar');
 
-# KronoCAL
-Intuitive Team Based Meeting Management Platform. Built By Dynamic Partners, for Dynamic Partners.
+const calendarEvent {
+    event = newEvent,
+    date = eventDate,
+    time = eventTime,
+};
 
-Schedual Meetings with custom defined variables. 
-Time, Date, Description, Name, notes, tasks, calendar integration, and more. 
+
