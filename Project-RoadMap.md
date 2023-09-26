@@ -1,20 +1,14 @@
-# Coming Soon
-    1. Roadmap v.1 (Project Scope).
-    2. Requiremnts List.
-    3. Admin Team member signing.
-    4. Updated Roadmap v.1.5
-
-# KronoCAL
-Intuitive Team Based Meeting Management Platform. Built By Dynamic Partners >>> for Dynamic Partners.
-
-Schedual Meetings with custom defined variables. 
-    Such as {
-        Time,
-        Date, 
-        Description, 
-        Name, 
-        notes, 
-        tasks, 
-        calendar integration, 
-        and more.
-    } 
+BOLD ITEMS ARE COMPLETED
+1. **Create an (*.html) "GUI".**
+2. **Create a JavaSctipt sheet for calendar support & functionality.**
+<!--ongoing-->
+3. Add in Features {
+    Fully editable event planning <!--This should include 'after-the-fact' edits-->
+    MSFT To-Do API using Graph
+    Outlook Calendar API Integration
+    Google Calendar API Integration
+    Tiered Priority settings
+    Attendee settings    
+} 
+    
+4. 

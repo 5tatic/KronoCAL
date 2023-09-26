@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Calendar</title>
+    <link rel="stylesheet" href="Index.html">
+</head>
+<body>
+    <h1>My Calendar</h1>
+
+    <!-- Form to add events -->
+    <div id="add-event">
+        <h2>Add Event</h2>
+        <form id="add-event-form">
+        <label for="eventName">Event Name:</label>
+        <input type="text" id="eventName" name="eventName">
+      
+        <label for="eventDate">Event Date:</label>
+        <input type="date" id="eventDate" name="eventDate">
+      
+        <label for="eventTime">Event Time:</label>
+        <input type="time" id="eventTime" name="eventTime">
+      
+        <label for="eventPriority">Priority:</label>
+        <select id="eventPriority" name="eventPriority">
+            <option value="high">High</option>
+            <option value="normal">Normal</option>
+            <option value="low">Low</option>
+        </select>
+      
+        <button type="submit">Add Event</button>
+        </form>
+      </div>
+
+    <!-- Display events -->
+    <div id="events-list">
+        <h2>Current Events</h2>
+        <ul id="events">
+        <!-- Events will be populated here -->
+        </ul>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>
