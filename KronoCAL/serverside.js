@@ -1,7 +1,6 @@
-// Replace these with your own values
-const clientID = "YOUR_CLIENT_ID";
-const clientSecret = "YOUR_CLIENT_SECRET";
-const refreshToken = "YOUR_REFRESH_TOKEN"; // You get this after the initial OAuth flow
+const clientID = process.env.CLIENT_ID;
+const clientSecret = process.env.CLIENT_SECRET;
+const refreshToken = process.env.REFRESH_TOKEN;
 
 async function getAccessToken() {
   const tokenEndpoint = "https://login.microsoftonline.com/common/oauth2/v2.0/token";
@@ -18,8 +17,17 @@ async function getAccessToken() {
     body: params.toString()
   };
 
-  const response = await fetch(tokenEndpoint, requestOptions);
-  const data = await response.json();
-  return data.access_token;
+  try {
+    const response = await fetch(tokenEndpoint, requestOptions);
+    if (response.ok) {
+      const data = await response.json();
+      return data.access_token;
+    } else {
+      const errorData = await response.json();
+      throw new Error(`Failed to get token: ${errorData.error_description}`);
+    }
+  } catch (error) {
+    console.error("An error occurred:", error);
+    return null;
+  }
 }
-
