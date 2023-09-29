@@ -1,7 +1,7 @@
 // Initialize an empty array to store calendar events
 let calendarEvents = [];
 // Function to add an event
-const addEvent = (eventName, eventDate, eventTime, priority = 'normal') => {
+const addEvent = (eventName, eventDate, eventTime, attendenceRequrements, priority = 'normal') => {
     const newEvent = {
         name: eventName,
         date: new Date(eventDate + " " + eventTime),
@@ -20,6 +20,55 @@ const addEvent = (eventName, eventDate, eventTime, priority = 'normal') => {
     calendarEvents.push(newEvent);
     console.log(`Event "${eventName}" added.`);
 };
+// Function to check for admin permissions
+function checkPermission(role) {
+    is (role === 'admin') {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+function createUser(email) {
+  // Validate email format
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (!emailRegex.test(email)) {
+    return 'Invalid email format';
+  }
+
+  // Create user object (this would usually be saved in a database)
+  const newUser = {
+    id: new Date().getTime(), // Just a placeholder for a unique ID
+    email: email,
+    role: 'user' // Default role
+  };
+
+  // Here you'd usually call an API to save the user to a database
+  console.log('User created:', newUser);
+
+  return newUser;
+}
+
+// Usage
+const email = 'example@email.com';
+const user = createUser(email);
+
+
+// Function to require admin permissions before deleting an Event
+function canDeleteEvent(userRole, eventOwnerId) {
+    return userRole === 'admin' || userRole === eventOwnerId;
+}
+
+const userRole = 'user'; // From user session or DB
+const eventOwnerId = 'ownerId'; // From the evend data
+
+if (canDeleteEvent(userRole, eventOwnerId)) {
+    // Call the API to del the event. 
+    console.log('Event Deleted');
+} else {
+    console.log('You must be an admin to do that');
+};
+
 // Function to delete an event
 const deleteEvent = (eventName) => {
     const index = calendarEvents.findIndex((event) => event.name === eventName);
