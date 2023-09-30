@@ -11,7 +11,7 @@ KronoCAL Workflow. (mostly just winging it).
     Google Calendar API Integration <!-- not started -->
     Tiered Priority settings <!-- not started -->
     Attendee settings <!-- Function created in 'calendarEvents.js' -->
-} 
+},
     
 4. First tests <!-- call all API's to ensure they are working -->
 
