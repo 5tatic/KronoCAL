@@ -21,23 +21,22 @@ KronoCal is a secure, customizable meeting management platform designed for busi
 - Creating and managing tasks related to meetings.(ms Graph Api)
 
 ## Security
-Encrypt the DB,
--Cli side encryption of passwords and usernames, 
--2FA requirements,
--Authentication support
--Reputation based trust
-
-KronoCal emphasizes security and data protection, implementing measures such as:
-- Role-based access control.
-- Regular security audits.
+- Encrypted DB,
+- Cli side encryption of passwords and usernames, 
+- 2FA requirements,
+- Authentication support
+- Reputation based trust
+- Role-based access control.(Admin/user accounts)
+- Regular security audits. (bi-weekly checks to ensure safe code)
 - Strict email security,
-1, Unable to open attachments
-2, no scripts should run from emails,
-3, NO external email addresses emails will be opened. (quaranteen and remove)
+  1, Unable to open attachments
+  2, no scripts should run from emails,
+  3, NO external email addresses emails will be opened. (quaranteen and remove)
 
 Please see the attached documents for detailed requirements and features.
 <!-- Keep in mind i have no idea what I'm doing so ask if you want to know something -->
 
 ## Contact
 
-For more information about KronoCal, please reach out to [aaron.ross@5tatic.dev].
+For more information about KronoCal, please reach out to:
+  info@5tatic.dev
