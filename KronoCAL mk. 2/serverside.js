@@ -147,3 +147,20 @@ const logger = winston.createLogger({
 // To log info or errors using Winston
 // logger.info('This is an info message');
 // logger.error('This is an error message');
+const { Client } = require('pg');
+
+const client = new Client({
+  host: 'setting',
+  port: 5432,
+  user: 'postgres',
+  password: '5taticPassInfo',
+  database: 'kronocal'
+});
+
+client.connect(err => {
+  if (err) {
+    console.error('Connection error', err.stack);
+  } else {
+    console.log('Connected to the database');
+  }
+});
