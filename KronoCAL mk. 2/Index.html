@@ -1,41 +1,78 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta display="'User_display', initial_scale='1.0', minimum_scale='1.0', maximum_scale='2.0', user_scalealbe="true">
+    <meta viewport="display='user_display', initial_scale='1.0', minimum_scale='1.0', maximum_scale='2.0', user_scaleable='true'">
     <title>My Calendar</title>
-    <link rel="stylesheet" href="KronoCAL.css">
+    <link rel="stylesheet" href="Kronos.css">
 </head>
 <body>
+
+    <!-- Popup sign in form -->
+    <div id="header_div" for="log-in" class="area-placeholder">
+        <popout id="user-justify" class="login-pop" for="header_div">
+            <label for="log-in">Log in or create account</label>
+            <form id="log-in" class="login">
+                <input id="email" type="email" for="log-in" placeholder="JohnQSmith@email.com"></entryfield><br>
+                <input id="secret" class="password" placeholder="Password Please"></entryfield><br>
+                <button id="Li-Btn" type="login" for="log-in">Log In</button><br>
+                <a link= url"https://reset.password.5tatic.dev">Forgoten your password have you</a><br> <!-- this is just a placeholder and needs to be updated -->
+            </form>
+        </popout>
+    </div>
+
+    <!-- Calendar switcher -->
+    <div id="cal_div" class="details" for="CAL_Det">
     <h1>My Calendar</h1>
-    <details>
-    <!-- Form to add events -->
-    <div id="add-event">
-        <h2>Add Event</h2>
-        <form id="add-event-form">
-        <label for="eventName">Event Name:</label>
-        <input type="text" id="eventName" name="eventName">
-      
-        <label for="eventDate">Event Date:</label>
-        <input type="date" id="eventDate" name="eventDate">
-      
-        <label for="eventTime">Event Time:</label>
-        <input type="time" id="eventTime" name="eventTime">
-      
-        <label for="eventPriority">Priority:</label>
-        <select id="eventPriority" name="eventPriority">
-            <option value="high">High</option>
-            <option value="normal">Normal</option>
-            <option value="low">Low</option>
-        </select>
-      
+        <p>Select your preferred calendar</p>
+        <details>
+            <ol>
+                <li><a link= url"https://Outlook.com/calendar">Outlook</a>></li><br>
+                <li><a link= url"https://Google.com/calendar">Google</a></li><br>
+            </ol>
+        </details>
+
+        <!-- add support for calendar selection here -->
+        <!-- Graph API toolkit for outlook Calendar -->
+        <!-- Google Dev API for Google Calendar -->
+        <!-- IF concepts bump, stick with outlook -->
+    
+    <div id="add-meeting" class="container" for="new-meeting">
+        <label id="form label" for="new-meeting">Meeting Creation</label>
+        <form id="add-event-form" class="Calendar-event">
+            <input id="Meeting" type="Title" for="Meeting-Name" placeholder="Give your Meeting a Title/Name">
+            <a button>Continue<details>
+            <select id="Dept-sel" name="Dept-sel">
+                <option value="billing">Billing</option>
+                <option value="Client">Client</option>
+                <option value="Employee">Employee</option>
+                <option value="Team-Leaders">Team Lead</option>
+                <option valu="Managers">Managers</option>
+            </select>
+            <select>
+                <option value="must">Must Attend</option> 
+                <option value="Strongly-Suggested">Stong Suggest</option>
+                <option value="Optional">Optional Not-required</option>
+                <option value="closed">Closed Meeting</option>
+            </select>
+            <input id="Attendies" type="comma-seperated" name="Attendies" placeholder="Seperate values by commma">
+            <input id="meeting-date" type="eventDate" name="Date-M">
+            <input id="Meeting-Time" type="time" name="Meet-time">
+            <select>
+                <option value="RSVP sendout">RSVP</option> <!-- This will enact an automated sendout to required attendees -->
+                <option value="NO RSVP">No RSVP</option> <!-- This will still send a notification of the meeting without RSVP feedback -->
+            </select>
+            <select>
+                <option value="high">1</option>
+                <option value="medium">2</option>
+                <option value="low">3</option>
+            </select>
         <button type="submit">Add Event</button>
         </form>
+        </details></a>
       </div>
-        <summary>
-            Click details to add a meeting!!
-        </summary>
-    </details>
+    
+        
     <!-- Display events -->
     <div id="events-list">
         <h2>Current Events</h2>
