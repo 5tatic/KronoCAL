@@ -1,4 +1,4 @@
-# KronoCal
+# KronoCal !!! The Zip needs to be tested
 
 ## Overview
 
