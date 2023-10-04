@@ -1,5 +1,6 @@
-# KronoCal !!! The Zip needs to be tested
-
+<!-- Kronos-0 --><!-- awaiting test stage -->
+# KronoCal !!! The Zip needs to be tested.
+<!-- so far there's an HTML page for the main interface which allows for calendar theme selection -->
 ## Overview
 
 KronoCal is a secure, customizable meeting management platform designed for businesses. It provides admins and attendees with various functionalities to schedule meetings, manage agendas, and much more.
@@ -40,3 +41,13 @@ Please see the attached documents for detailed requirements and features.
 
 For more information about KronoCal, please reach out to:
   info@5tatic.dev
+=======
+let calendar = ('eventCalendar');
+
+const calendarEvent {
+    event = newEvent,
+    date = eventDate,
+    time = eventTime,
+};
+
+calendar-integration
