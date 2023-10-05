@@ -1,36 +1,21 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta viewport="display='user_display', initial_scale='1.0', minimum_scale='1.0', maximum_scale='2.0', user_scaleable='true'">
-    <title>My Calendar</title>
+    <title>KronoCal</title>
     <link rel="stylesheet" href="Kronos.css">
 </head>
 <body>
-
-    <!-- Popup sign in form -->
-    <div id="header_div" for="log-in" class="area-placeholder">
-        <popout id="user-justify" class="login-pop" for="header_div">
-            <label for="log-in">Log in or create account</label>
-            <form id="log-in" class="login">
-                <input id="email" type="email" for="log-in" placeholder="JohnQSmith@email.com"></entryfield><br>
-                <input id="secret" class="password" placeholder="Password Please"></entryfield><br>
-                <button id="Li-Btn" type="login" for="log-in">Log In</button><br>
-                <a link= url"https://reset.password.5tatic.dev">Forgoten your password have you</a><br> <!-- this is just a placeholder and needs to be updated -->
-            </form>
-        </popout>
-    </div>
-
-    <!-- Calendar switcher -->
-    <div id="cal_div" class="details" for="CAL_Det">
-    <h1>My Calendar</h1>
-        <p>Select your preferred calendar</p>
-        <details>
-            <ol>
-                <li><a link= url"https://Outlook.com/calendar">Outlook</a>></li><br>
-                <li><a link= url"https://Google.com/calendar">Google</a></li><br>
-            </ol>
-        </details>
+ <!-- Calendar switcher -->
+<div id="cal_div" class="details" for="CAL_Det">
+<h1>My Calendar</h1>
+    <p>Select your preferred calendar</p>
+    <details>
+        <ol>
+            <li><a link= url"https://Outlook.com/calendar">Outlook</a>></li><br>
+            <li><a link= url"https://Google.com/calendar">Google</a></li><br>
+        </ol>
+    </details>
 
         <!-- add support for calendar selection here -->
         <!-- Graph API toolkit for outlook Calendar -->
