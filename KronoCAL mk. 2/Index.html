@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KronoCal</title>
+    <link rel="stylesheet" href="Kronos.css">
+</head>
+<body>
+ <!-- Calendar switcher -->
+<div id="cal_div" class="details" for="CAL_Det">
+<h1>My Calendar</h1>
+    <p>Select your preferred calendar</p>
+    <details>
+        <ol>
+            <li><a link= url"https://Outlook.com/calendar">Outlook</a>></li><br>
+            <li><a link= url"https://Google.com/calendar">Google</a></li><br>
+        </ol>
+    </details>
+
+        <!-- add support for calendar selection here -->
+        <!-- Graph API toolkit for outlook Calendar -->
+        <!-- Google Dev API for Google Calendar -->
+        <!-- IF concepts bump, stick with outlook -->
+    
+    <div id="add-meeting" class="container" for="new-meeting">
+        <label id="form label" for="new-meeting">Meeting Creation</label>
+        <form id="add-event-form" class="Calendar-event">
+            <input id="Meeting" type="Title" for="Meeting-Name" placeholder="Give your Meeting a Title/Name">
+            <a button>Continue<details>
+            <select id="Dept-sel" name="Dept-sel">
+                <option value="billing">Billing</option>
+                <option value="Client">Client</option>
+                <option value="Employee">Employee</option>
+                <option value="Team-Leaders">Team Lead</option>
+                <option valu="Managers">Managers</option>
+            </select>
+            <select>
+                <option value="must">Must Attend</option> 
+                <option value="Strongly-Suggested">Stong Suggest</option>
+                <option value="Optional">Optional Not-required</option>
+                <option value="closed">Closed Meeting</option>
+            </select>
+            <input id="Attendies" type="comma-seperated" name="Attendies" placeholder="Seperate values by commma">
+            <input id="meeting-date" type="eventDate" name="Date-M">
+            <input id="Meeting-Time" type="time" name="Meet-time">
+            <select>
+                <option value="RSVP sendout">RSVP</option> <!-- This will enact an automated sendout to required attendees -->
+                <option value="NO RSVP">No RSVP</option> <!-- This will still send a notification of the meeting without RSVP feedback -->
+            </select>
+            <select>
+                <option value="high">1</option>
+                <option value="medium">2</option>
+                <option value="low">3</option>
+            </select>
+        <button type="submit">Add Event</button>
+        </form>
+        </details></a>
+      </div>
+    
+        
+    <!-- Display events -->
+    <div id="events-list">
+        <h2>Current Events</h2>
+        <ul id="events">
+        <!-- Events will be populated here -->
+        </ul>
+    </div>
+
+    <script>
+
+    </script>
+
+    <!-- Email Signup Section -->
+    <details id="email-signup">
+        <summary>Sign up via Email</summary>
+        <form id="email-signup-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="confirm-email">Confirm Email:</label>
+            <input type="email" id="confirm-email" name="confirm-email" required>
+            
+            <label for="permissions">
+                <input type="checkbox" id="permissions" name="permissions" required>
+                I agree to the terms and conditions.
+            </label>
+            
+            <input type="submit" value="Sign Up">
+        </form>
+    </details>
+</body>
+</html>
