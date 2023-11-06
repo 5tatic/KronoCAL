@@ -41,13 +41,4 @@ Please see the attached documents for detailed requirements and features.
 
 For more information about KronoCal, please reach out to:
   info@5tatic.dev
-=======
-let calendar = ('eventCalendar');
 
-const calendarEvent {
-    event = newEvent,
-    date = eventDate,
-    time = eventTime,
-};
-
-calendar-integration
